@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-    class Employee : Person
+    class Employee : Person, ICloneable
     {
         public int Salary { get; set;}
         public string Profession { get; set;}
@@ -29,5 +29,11 @@ namespace ConsoleApp2
             return base.ToString() + $", salary: {Salary},  profession: {Profession}, room: {Room.Number}";
         }
 
+        public object Clone()
+        {
+            Employee newEmployee = (Employee)this.MemberwiseClone();
+            newEmployee.Room = new Room(Room.Number);
+            return newEmployee;
+        }
     }
 }
