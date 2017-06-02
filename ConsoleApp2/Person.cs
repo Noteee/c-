@@ -4,8 +4,8 @@ namespace ConsoleApp2
 {
     class Person
     {
-        public String Name { get; set; }
-        public int BirthDate { get; set; }
+        public string Name { get; set; }
+        public DateTime BirthDate { get; set; }
 
 
         public Person()
@@ -13,15 +13,15 @@ namespace ConsoleApp2
 
         }
 
-        public Person (String Name, int BirthDate)
+        public Person (string name, DateTime birthDate)
         {
-            this.Name = Name;
-            this.BirthDate = BirthDate;
+            this.Name = name;
+            this.BirthDate = birthDate;
         }
 
         public enum Genders : int { Male, Female };
 
-        public Genders gender;
+        public Genders Gender;
 
         public override string ToString()
         {
