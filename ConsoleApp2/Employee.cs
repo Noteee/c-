@@ -31,7 +31,7 @@ namespace ConsoleApp2
 
         public object Clone()
         {
-            Employee newEmployee = (Employee)this.MemberwiseClone();
+            var newEmployee = (Employee)this.MemberwiseClone();
             newEmployee.Room = new Room(Room.Number);
             return newEmployee;
         }
